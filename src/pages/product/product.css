@@ -1,0 +1,245 @@
+.product-page{
+    padding: 3% 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+.product-img{
+    display: grid;
+    grid-template-columns: 70px auto;
+    column-gap: 15px;
+}
+.product-images img{
+    max-width: 70px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.product-image img{
+    width: 100%;
+    height: auto;
+}
+.product-cat-title p{
+    margin-bottom: 5px;
+
+}
+.product-cat-title h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.review{
+    margin-top: 5px;
+}
+.product-color h3{
+    margin-bottom: 5px;
+}
+.product-color h4{
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 15px;
+    background-color: #fff;
+    color: rgba(0,0,0,0.7);
+    padding: 1% 5%;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 25px;
+}
+.product-color h4:hover{
+    cursor: pointer;
+}
+.selected{
+    background-color: rgba(0,0,0,0.7)!important;
+    color: #fff!important;
+}
+.product-size h3{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.product-size h4{
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 15px;
+    color: rgba(0,0,0,0.7);
+    padding: 1% 5%;
+    border: 1px solid rgba(0,0,0,0.7);
+    padding: 1% 5%;
+    border-radius: 25px;
+}
+.product-size h4{
+    cursor: pointer;
+}
+.product-desc h3{
+    margin-top: 5px;
+    margin-bottom: 0;
+
+}
+.product-desc p{
+    margin-top: 8px;
+}
+.product-activity{
+    
+    display: grid;
+    grid-template-columns: 1.7fr .3fr;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+.product-activity button{
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    width: 100%;
+    color: #fff;
+    padding: 5% 8%;
+    font-size: 1.1rem;
+    border-radius: 25px;
+}
+.product-price{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.wishlist{
+    font-size: 1.2rem;
+    background-color: rgb(229 231 235);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pincode-check{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+}
+.input{
+    align-self: center;
+   border: none;
+   margin-left: 10px;
+}
+.pincode-check input{
+   
+    border: none;
+    padding: 5%;
+    outline: none;
+}
+.pincode-check button{
+    border: none;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 25px;
+    color: #fff;
+    padding: 1% 8%;
+    
+}
+.product-activity button:hover{
+    cursor: pointer;
+}
+.img-select-border{
+   
+    border: 3px solid rgba(0,0,0,1);
+}
+
+.p-image:hover{
+    cursor: pointer;
+}
+.wishlist:hover{
+    cursor: pointer;
+}
+.review-section{
+    margin-top: 40px;
+}
+.see-reviews span{
+    margin: initial;
+}
+.see-reviews h3{
+    margin-bottom: 0;
+}
+.see-reviews p{
+   margin-top: 10px;
+}
+.write-review select{
+    width: 50%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.write-review textarea{
+    width: 50%;
+}
+.rating-icon{
+    color:#F2BE22;
+    
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .product-page{
+        padding: 3% 8%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+    .product-images img{
+        max-width: 50px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    .product-color h4{
+        display: inline-block;
+        font-size: .7rem;
+        margin-top: 8px;
+        margin-right: 15px;
+        background-color: #fff;
+        color: rgba(0,0,0,0.7);
+        padding: 1% 5%;
+        border: 1px solid rgba(0,0,0,0.7);
+        border-radius: 25px;
+    }
+    .product-size h4{
+        display: inline-block;
+        font-size: .7rem;
+        margin-top: 8px;
+        margin-right: 15px;
+        color: rgba(0,0,0,0.7);
+        padding: 1% 5%;
+        border: 1px solid rgba(0,0,0,0.7);
+        padding: 1% 5%;
+        border-radius: 25px;
+    }
+    .product-activity button{
+        background-color: rgba(0,0,0,0.7);
+        border: none;
+        width: 100%;
+        color: #fff;
+        padding: 5% 8%;
+        font-size: .8rem;
+        border-radius: 25px;
+    }
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .product-page{
+        padding: 3% 8%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+}
+  
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .product-page{
+        padding: 3% 8%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+}
+  

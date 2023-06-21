@@ -1,0 +1,65 @@
+.checkout{
+padding: 4% 8%;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-top: 35px;
+}
+.checkout label{
+    margin-top: 15px;
+}
+.checkout input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid rgba(0,0,0,0.7);
+}
+.checkout textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+}
+.adrs-form{
+    margin-top: 35px;
+}
+.place-order{
+    margin-top: 50px;
+}
+.place-order-details{
+    border: 1px solid #EBEBEB;
+   
+}
+.place-order-head{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.place-order-details hr{
+    height: 1px;
+    background-color: #EBEBEB;
+    border: none;
+}
+.place-order-btn{
+    float: right;
+    margin-top: 25px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 1% 3%;
+}
+.item-qty{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+.item-qty button{
+    background-color: #fff;
+    border: 1px solid #EBEBEB;
+   height: 25px;
+   width: 25px;
+   border-radius: 50%;
+}

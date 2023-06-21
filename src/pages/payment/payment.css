@@ -1,0 +1,40 @@
+.payment{
+    padding: 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payment-details{
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 2%;
+}
+.payment h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h4 span{
+    font-weight: 400;
+    font-size: 1rem;;
+}
+.payment-method label{
+    margin-left: 5px;
+
+}
+.pay-btn{
+    margin-top: 25px;
+    background-color: rgba(0,0,0,1);
+    border: none;
+    color: #fff;
+    padding: 3% 6%;
+}
+.pay-btn span{
+    font-size: 1rem;
+    height: 20px;
+  
+    
+    
+}
+.pay-btn:hover{
+    cursor: pointer;
+}

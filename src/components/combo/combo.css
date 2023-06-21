@@ -1,0 +1,8 @@
+.combo{
+    background-color: rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-columns: 1.7fr .3fr;
+    column-gap: 15px;
+    padding: 1% 4%;
+    
+}

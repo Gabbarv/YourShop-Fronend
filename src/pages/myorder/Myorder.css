@@ -1,0 +1,13 @@
+.my-order{
+    padding: 4% 8%;
+}
+.my-order-heading{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   justify-items: center;
+}
+.my-order-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   justify-items: center;
+}

@@ -1,0 +1,12 @@
+.footer-copy{
+   
+    text-align: center;
+    background-color: #454545;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position:absolute;
+left:0;
+bottom:0;
+right:0;
+}

@@ -1,0 +1,45 @@
+.odr{
+    padding: 4% 8%;
+}
+.order{
+    
+    display: grid;
+    grid-template-columns: 1.6fr .4fr;
+    gap: 30px;
+}
+
+.order-products{
+    display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     justify-items: center;
+     align-items: center;
+    
+
+}
+.orderDetails{
+
+    border: 1px solid #EBEBEB;
+    border-radius: 20px;
+    
+}
+.details{
+    padding: 2% 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.details h5{
+    color: rgba(0,0,0,0.6);
+}
+.orderDetails hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.a p{
+    margin-bottom: 5px;
+    
+}
+.a h4{
+    margin-top: 0;
+}

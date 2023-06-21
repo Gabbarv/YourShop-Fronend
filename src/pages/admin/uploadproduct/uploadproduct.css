@@ -1,0 +1,29 @@
+.upload-product{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+}
+.upload-product form{
+    text-align: left;
+}
+.upload-product input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+.upload-product select{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    
+}
+.upload-product input[type='checkbox']{
+    width: initial;
+    height: initial;
+    margin: 5px;
+}

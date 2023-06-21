@@ -1,0 +1,20 @@
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.login{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 2%;
+    margin-bottom: 220px;
+}
+
+.signup{
+
+ border: 1px solid black;
+    border-radius: 15px;
+    padding: 2%;
+    margin-bottom: 200px;
+}
