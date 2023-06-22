@@ -10,53 +10,42 @@ const Myorder = () => {
   console.log(orders)
   useEffect(() => {
     dispatch(getAllOrders())
+    console.log(orders)
   },[])
   return (
-    <div className='my-order'>
-         <div className='my-order-heading'>
-         <div>
-                <h4>Order Id</h4>
-            </div>
-            <div>
-                <h4>Address</h4>
-            </div>
-            <div>
-                <h4>Payment Method</h4>
-            </div>
-            <div>
-                <h4>Payment Status</h4>
-            </div>
-            
-            <div>
-            <h4>Total</h4>
-            </div>
-         </div>
+    <>
+    <table >
+         <thead >
+         <tr>
+                <th>Order Id</th>
+                <th>Address</th>
+                <th>Payment Method</th>
+                <th>Payment Status</th>
+                <th>Total</th>
+            </tr>
+           
+         </thead>
          {orders && orders.map(order => {
-                return   <><div className='my-order-content'>
-                     <div>
-                           <Link to={`/order/${order._id}`}><h5>{order._id}</h5></Link> 
-                        </div>
-                        <div>
-                            <h5>{order.address}</h5>
-                        </div>
-                        <div>
-                            <h5>{order.paymentMethod}</h5>
-                        </div>
-                        <div>
-                            <h5>{order.status}</h5>
-                        </div>
-                        
-                        <div>
-                        <h5>{order.amount}</h5>
-                        </div>
+                return   <><tbody >
+                     <tr>
+                           <td><Link to={`/order/${order._id}`}>{order._id}</Link></td>
+                           <td>{order.address}</td> 
+                           <td>{order.paymentMethod}</td>
+                           <td>{order.status}</td>
+                           <td>{order.amount}</td>
+                        </tr>
+                     
                       
-                      </div> </> 
+                      </tbody> </> 
 
          }) }
             
             
 
-    </div>
+    </table>
+
+   
+    </>
   )
 }
 

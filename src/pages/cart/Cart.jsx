@@ -25,7 +25,7 @@ const Cart = () => {
 
   return (
     <>
-   {cartItems.length === 0 ? <h1 className='empty-cart'>Your Cart Is Empty</h1> : <div className='cart'>
+   {cartItems.length === 0 ? <h1 className='empty-cart'>Your Cart Is Empty</h1> : <> <div className='cart'>
         <div className='cart-heading'>
             <div></div>
             <div>
@@ -70,9 +70,41 @@ const Cart = () => {
             <div className='cart-item-total'><p><span><BiRupee/></span>{cartItem.qty*cartItem.price}</p></div>
             <div onClick={() => removefromcart(cartItem.product)} className='cart-item-del'><MdDelete/></div>
       </div>
+    
 
         ))}
-       
+       <div className='cart-m'>
+
+       {cartItems.map(cartItem => (<div className='cart-item-m'>
+            <div className='cart-item-m-img'>
+                <img src={cartItem.image} />
+            </div>
+            <div className='cart-price-m'>
+                <div><p>{cartItem.title}</p></div>
+                <div><p><span><BiRupee/></span>{cartItem.price}</p></div>
+            </div>
+            <div className='cart-price-m'>
+                <div>
+                <div className='cart-item-qty'>
+            <div className='item-qty'>
+                      <button onClick={() => {
+
+                        if(cartItem.qty === 1){
+                            removefromcart(cartItem.product)
+                        }else{
+                            dispatch(addToCart(cartItem.product,cartItem.qty-1))
+                        }
+                        
+                        }} >-</button>
+                      <p>{cartItem.qty}</p>
+                      <button onClick={() => dispatch(addToCart(cartItem.product,cartItem.qty+1))}>+</button>
+                  </div>
+            </div>
+                </div>
+                <div onClick={() => removefromcart(cartItem.product)} className='cart-item-del'><MdDelete/></div>
+            </div>
+        </div>))}
+       </div> 
 
 
         <div className="cart-totals">
@@ -96,7 +128,7 @@ const Cart = () => {
                 PROCEED TO CHECKOUT
             </Link>
         </div>
-    </div>}
+    </div>  </>}
     </>
   )
 }

@@ -77,7 +77,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
 
     export const getAllOrders = () => async (dispatch) => {
       const {data} = await axios.get(`${url}/api/orders/my/allorders`)
-       console.log('action')
+       
       dispatch({
         type: ORDER_LIST_SUCCESS,
         payload: data

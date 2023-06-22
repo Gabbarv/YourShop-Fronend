@@ -47,7 +47,7 @@ const Checkout = () => {
         <div className='form-grid'>
             <div>
                 <label>Full Name</label><br/>
-                <input onChange={(e) => setFullName(e.target.value)} type='text' value={fullName}/>
+                <input onChange={(e) => setFullName(e.target.value)} type='text' value={fullName} required/>
             </div>
             <div>
                 <label>Email</label><br/>
@@ -56,26 +56,26 @@ const Checkout = () => {
         </div>
         <div className='adrs-form'>
             <label htmlFor="">Address</label> <br/>
-            <textarea onChange={(e) => setAddress(e.target.value)} value={address} />
+            <textarea onChange={(e) => setAddress(e.target.value)} value={address} required />
         </div>
         <div className='form-grid'>
             <div>
                 <label>Mobile No</label><br/>
-                <input onChange={(e) => setMobNo(e.target.value)}  type='number' value={mobNo}/>
+                <input onChange={(e) => setMobNo(e.target.value)}  type='number' value={mobNo} required/>
             </div>
             <div>
                 <label>PinCode</label><br/>
-                <input onChange={(e) => setPincode(e.target.value)} type='number' value={pincode}/>
+                <input onChange={(e) => setPincode(e.target.value)} type='number' value={pincode} required/>
             </div>
         </div>
         <div className='form-grid'>
             <div>
                 <label>State</label><br/>
-                <input onChange={(e) => setState(e.target.value)} type='text' value={state}/>
+                <input onChange={(e) => setState(e.target.value)} type='text' value={state} required/>
             </div>
             <div>
                 <label>District</label><br/>
-                <input onChange={(e) => setDistrict(e.target.value)} type='text' value={district}/>
+                <input onChange={(e) => setDistrict(e.target.value)} type='text' value={district} required/>
             </div>
         </div>
 

@@ -19,6 +19,7 @@ const Navbar = ({keyword,setKeyword}) => {
     const { cartItems } = cart
   
   const logouthandler = () =>{
+    setShowNav(false)
     dispatch(logout())
   }
 
@@ -76,14 +77,14 @@ const Navbar = ({keyword,setKeyword}) => {
             </div>       
           
          {showNav && <div>
-         <Link to='/tshirts'><h4>T-Shirt</h4></Link>
-          <Link to='/shirts'><h4>Shirt</h4></Link>
-          <Link to='/jeans'><h4>Jeans</h4></Link>
-          <Link to = '/myaccount'><h4>My account</h4></Link>
-          <Link to='/orders'><h4>Orders</h4></Link>
+         <Link to='/tshirts'><h4 onClick={() => {setShowNav(false)}}>T-Shirt</h4></Link>
+          <Link to='/shirts'><h4 onClick={() => {setShowNav(false)}}>Shirt</h4></Link>
+          <Link to='/jeans'><h4 onClick={() => {setShowNav(false)}}>Jeans</h4></Link>
+         { user && <Link to = '/myaccount'><h4 onClick={() => {setShowNav(false)}}>My account</h4></Link>}
+         { user && <Link to='/myorders'><h4 onClick={() => {setShowNav(false)}}>Orders</h4></Link>}
           
-          <h4 onClick={logouthandler}>Log out</h4>
-          <Link to='/cart'><BsCart3/></Link>
+         { user && <h4 onClick={logouthandler}>Log out</h4>}
+          <Link to='/cart'><BsCart3 onClick={() => {setShowNav(false)}}/></Link>
             </div> }
             
    

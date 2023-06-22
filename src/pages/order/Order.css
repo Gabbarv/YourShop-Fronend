@@ -43,3 +43,18 @@
 .a h4{
     margin-top: 0;
 }
+
+
+
+@media (max-width: 767px){
+    .odr{
+        padding: 2% 5%;
+    }
+    .order{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+
+}

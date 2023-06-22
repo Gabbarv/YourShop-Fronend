@@ -83,7 +83,13 @@ input[type="range"] {
             display: initial;
             
         }
-        .tshirt-left{
+        .tshirt-right{
+          display: grid;
+          grid-template-columns: 1fr;
+       
+      }
+       
+          .tshirt-left-m{
             display: none;
           }
           .filter-m{
@@ -99,6 +105,11 @@ input[type="range"] {
             display: initial;
             
         }
+        .tshirt-right{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 20px;
+      }
       .tshirt-left-m{
         display: none;
       }
