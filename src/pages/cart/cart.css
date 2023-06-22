@@ -51,6 +51,9 @@
 
 
 @media (max-width: 480px){
+    .cart-m{
+        display: block;
+    }
     .cart{
         padding: 2% 5%;
     }

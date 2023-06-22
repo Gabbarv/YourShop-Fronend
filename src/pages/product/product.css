@@ -221,6 +221,16 @@
         font-size: .8rem;
         border-radius: 25px;
     }
+
+    .pincode-check button{
+        border: none;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 25px;
+        font-size: .8rem;
+        color: #fff;
+        padding: 1% 8%;
+        
+    }
 }
   
 /* Media Query for low resolution  Tablets, Ipads */
