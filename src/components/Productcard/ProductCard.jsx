@@ -65,7 +65,7 @@ const ProductCard = ({product}) => {
   return (
     <div className='product-card'>
     <div className='product-card-img'>
-        <img src={`http://localhost:5000/${product.img[0]}`} />
+        <img src={product.img[0]} />
     </div>
  
     <div className='product-details'>

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { GET_PINCODE_SUCCESS,GET_PIN_CODE_REQUEST } from '../constants/pinCodeConstants'
+import { url } from './Url'
 
 
 export const getPinCodes = () => async (dispatch) => {

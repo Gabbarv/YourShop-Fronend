@@ -1,0 +1,1 @@
+export const url = 'https://your-shop-backend.vercel.app'

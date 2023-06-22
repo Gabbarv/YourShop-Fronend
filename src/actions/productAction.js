@@ -23,6 +23,7 @@ import {
   PRODUCT_TOP_FAIL,
   PRODUCT_WISHLIST_SUCCESS
 } from '../constants/productConstants'
+import { url } from './Url'
 
 
 
@@ -36,7 +37,7 @@ export const getProductByCategory = (category,maxPrice,size,color) => async (dis
       },
     }
     const { data } = await axios.get(
-      '/api/products/productByCategory',
+      `${url}/api/products/productByCategory`,
        {params: {category,maxPrice,size,color}},
        
     )
@@ -69,7 +70,7 @@ export const addProducts = (formData) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      '/api/products/addproducts',
+      `${url}/api/products/addproducts`,
       formData,
       config
     )
@@ -89,12 +90,12 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
     dispatch
   ) => {
 
-    console.log(keyword)
+    
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST })
   
       const { data } = await axios.get(
-        `/api/products`,
+        `${url}/api/products`,
         {params: {keyword,pageNumber}},
       )
   
@@ -119,7 +120,7 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
     try{
        
       dispatch({ type: PRODUCT_DETAILS_REQUEST})
-      const {data} = await axios.get(`/api/products/details/${slug}`)
+      const {data} = await axios.get(`${url}/api/products/details/${slug}`)
       
      
       
@@ -147,7 +148,7 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
       },
     }
 
-    const {data} = await axios.post(`/api/products/wishlist/${itemId}`,{userId},config)
+    const {data} = await axios.post(`${url}/api/products/wishlist/${itemId}`,{userId},config)
 
     dispatch({
       type: PRODUCT_WISHLIST_SUCCESS,
@@ -180,7 +181,7 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
         },
       }
   
-      await axios.post(`/api/products/${productId}/reviews`, {review,user,rating}, config)
+      await axios.post(`${url}/api/products/${productId}/reviews`, {review,user,rating}, config)
   
       dispatch({
         type: PRODUCT_CREATE_REVIEW_SUCCESS,

@@ -25,6 +25,7 @@ import {
   USER_UPDATE_SUCCESS,
   USER_UPDATE_REQUEST,
 } from '../constants/userConstants'
+import { url } from './Url'
 
 
 
@@ -41,7 +42,7 @@ export const register = (name, email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.post(
-        '/api/auth/signup',
+        `${url}/api/auth/signup`,
         { name, email, password },
         config
       )
@@ -84,7 +85,7 @@ export const register = (name, email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.post(
-        '/api/auth/login',
+        `${url}/api/auth/login`,
         { email, password },
         config
       )
@@ -109,7 +110,7 @@ export const register = (name, email, password) => async (dispatch) => {
 
   export const updatePassword = (email,oldPassword,newPassword) => async (dispatch) => {
 
-    console.log("hii")
+    
     dispatch({type: USER_UPDATE_PROFILE_REQUEST})
 
     try {
@@ -121,7 +122,7 @@ export const register = (name, email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.post(
-        '/api/auth/changePassword',
+        `${url}/api/auth/changePassword`,
         { email,oldPassword, newPassword },
         config
       )
