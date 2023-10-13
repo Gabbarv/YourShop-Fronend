@@ -19,12 +19,21 @@ const Payment = () => {
     const [paymentMethod,setPaymentMethod] = useState("")
    const orderDetails = useSelector(state => state.orderCreate)
    
-    // useEffect(() => {
-    //   console.log(orderDetails.order)
-    //   if(orderDetails.success){
-    //     navigate(`/order/${orderDetails.order._id}`)
-    //   }
-    // },[orderDetails])
+    useEffect(() => {
+      if(paymentMethod === 'PAY NOW'){
+        buyCourse({
+          amount: shippingDetails.subTotal,
+          userId: user._id,
+          email: shippingDetails.email,
+          name: shippingDetails.fullName,
+          _id: orderDetails?.order?._id,
+          
+                           
+        },navigate);
+  }else if(paymentMethod === 'COD'){
+    navigate(`/order/${orderDetails?.order?._id}`)
+  }
+    },[orderDetails])
 
     const submitHandler = (e) => {
       e.preventDefault()
@@ -41,19 +50,7 @@ const Payment = () => {
       }))
 
 
-      if(paymentMethod === 'PAY NOW'){
-            buyCourse({
-              amount: shippingDetails.subTotal,
-              userId: user._id,
-              email: shippingDetails.email,
-              name: shippingDetails.fullName,
-              _id: orderDetails?.order?._id,
-              
-                               
-            },navigate);
-      }else if(paymentMethod === 'COD'){
-        navigate(`/order/${orderDetails?.order?._id}`)
-      }
+     
     
       
       
