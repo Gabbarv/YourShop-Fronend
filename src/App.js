@@ -49,9 +49,9 @@ function App() {
     <Route path='/shirts' element = {<Shirts keyword={keyword} />}/>
     <Route path='/jeans' element = {<Jeans keyword={keyword} />}/>
     {/* <Route path='/orders' element = {user ?<Myorder/>: <Login/>}/> */}
-    <Route path='/admin/dashboard' element = {user && user.isAdmin ?<Dashboard/>: <Login/>}/>
-    <Route path='/admin/aorders' element = {user && user.isAdmin ?<Aorders/>: <Login/>}/>
-    <Route path='/admin/uploadproducts' element = {user && user.isAdmin ?<Uploadproduct/>: <Login/>}/>
+    <Route path='/admin/dashboard' element = {user ? (user.isAdmin && <Dashboard/>): <Login/>}/>
+    <Route path='/admin/aorders' element = {user ? (user.isAdmin && <Aorders/>): <Login/>}/>
+    <Route path='/admin/uploadproducts' element = {user ? (user.isAdmin && <Uploadproduct/>): <Login/>}/>
 
     
   </Routes>
