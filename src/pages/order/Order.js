@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import {BiRupee} from 'react-icons/bi'
+import { buyCourse } from '../../actions/paymentAction'
 import { getOrderDetails } from '../../actions/orderActions'
 import "./Order.css"
 
@@ -10,6 +11,7 @@ const Order = () => {
     const {id} = useParams();
    const [orderProducts,setOrderProducts] = useState()
    const [orderD,setOrderD] = useState()
+   const navigate = useNavigate();
    
 
     useEffect(() => {
@@ -72,7 +74,7 @@ const Order = () => {
         
 
       </div>
-      { orderDetails && <div className='orderDetails'>
+      { orderDetails && <div> <div className='orderDetails'>
         <div className='details'>
              <div><p>Status</p></div>
              <div className='totals-right'><h4>{orderDetails.status}</h4></div>
@@ -96,7 +98,13 @@ const Order = () => {
         <div>
         
         </div>
+
+    
+      </div> 
+     { orderDetails.status === 'Pending' && <button onClick={() => buyCourse(orderDetails,navigate)} type='submit' className='Pay-now-btn'>Pay Now</button>}
       </div>}
+
+    
     </div></div>
   )
 }
